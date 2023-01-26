@@ -29,8 +29,11 @@ const Biz = () => {
                         .text-xl {
                             font-size: 2em;
                         }
-                        .text-3xl {
-                            font-size: 6em;
+                        .text-2xl {
+                            font-size: 4em;
+                        }
+                        .m-0 {
+                            margin: 0 !important;
                         }
                         @media (prefers-color-scheme: dark) {
                             .text-black {
@@ -42,11 +45,11 @@ const Biz = () => {
                         }
                     `}
                 </style>
-                <link rel="stylesheet" src="./static/dark.css" />
+                <link rel="stylesheet" src="https://raw.githubusercontent.com/ruvasqm/react-email-starter/master/emails/static/dark.css" />
             </Head>
             <body className="h-100 w-100 text-black">
                 <div className="h-100 w-100 text-black" >
-                    <h1 className="text-primary font-bold text-3xl">Hello World</h1>
+                    <h1 className="text-primary font-bold text-2xl m-0">Hello World</h1>
                     <p className=" text-xl text-black"> These are some of my links, feel free to check them out.</p>
                 </div>
             </body>
