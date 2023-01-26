@@ -1,0 +1,8 @@
+@media (prefers-color-scheme: dark) {
+    .text-primary {
+        color: #f0db4f !important;
+    }
+    .text-black {
+        color: #fff !important;
+    }
+}

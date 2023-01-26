@@ -1,75 +1,54 @@
-import { Container } from '@react-email/container';
 import { Html } from '@react-email/html';
-import { Text } from '@react-email/text';
+import { Head } from '@react-email/head';
 
 import * as React from 'react';
 
 const Biz = () => {
-    const styles = {
-        html: {
-            width: '100%',
-            height: '100vh',
-        },
-        body: {
-            width: '100%',
-            height: '100%',
-            "@media (prefers-color-scheme: dark)": {
-                color: '#fff',
-            }
-        },
-        container: {
-            width: '100%',
-            height: '100%',
-        },
-        text_primary: {
-            color: '#f0db4f',
-            fontWeight: '700',
-            fontSize: '3em',
-            "@media (prefers-color-scheme: dark)": {
-                color: '#f0db4f',
-            }
-
-        },
-
-    };
     return (
-        <Html style={ styles.html}>
-            <style>
-                {`
-                    .text-primary {
-                        color: #f0db4f;
-                    }
-                    .text-black {
-                        color: #000;
-                    }
-                    .font-bold {
-                        font-weight: 700;
-                    }
-                    .text-3xl {
-                        font-size: 6em !important;
-                    }
-                    .text-xl {
-                        font-size: 3em !important;
-                    }
-                    .container {
-                        width: 100%;
-                        height: 100%;
-                    }
-                    @media (prefers-color-scheme: dark) {
-                        .text-primary {
-                            color: #f0db4f;
+        <Html className="h-100 w-100 text-black">
+            <Head>
+                <meta name="color-scheme" content="dark light" />
+                <meta name="supported-color-schemes" content="dark light" />
+                <style>
+                    {`
+                        .h-100 {
+                            height: 100%;
+                        }
+                        .w-100 {
+                            width: 100%;
                         }
                         .text-black {
-                            color: #fff;
+                            color: #000;
                         }
-                    }
-                `}
-            </style>
-            <body style={styles.body}>
-                <Container className="container text-black" >
+                        .text-primary{
+                            color: #f0db4f;
+                        }
+                        .font-bold {
+                            font-weight: 700;
+                        }
+                        .text-xl {
+                            font-size: 2em;
+                        }
+                        .text-3xl {
+                            font-size: 6em;
+                        }
+                        @media (prefers-color-scheme: dark) {
+                            .text-black {
+                                color: #fff !important;
+                            }
+                            .text-primary {
+                                color: #f0db4f !important;
+                            }
+                        }
+                    `}
+                </style>
+                <link rel="stylesheet" src="./static/dark.css" />
+            </Head>
+            <body className="h-100 w-100 text-black">
+                <div className="h-100 w-100 text-black" >
                     <h1 className="text-primary font-bold text-3xl">Hello World</h1>
                     <p className=" text-xl text-black"> These are some of my links, feel free to check them out.</p>
-                </Container>
+                </div>
             </body>
         </Html>
     );
